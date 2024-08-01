@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Ex02 {
 
-    public static void mainExo02(String[] args) {
+    public static void mainExo02() {
 
         Scanner userInput = new Scanner(System.in);
 
@@ -43,8 +43,43 @@ public class Ex02 {
 
         }
 
+        while (!confirmationY) {
+
+            System.out.println("Veuillez saisir un nombre entier positif pour \"Y\" :");
+
+            Y = userInput.nextInt();
+
+            System.out.println("Vous avez saisi le nombre : " + Y + ". Est-ce correct ? (oui/non)");
+
+            String reponse = userInput.next();
+
+            if (reponse.equalsIgnoreCase("oui")) {
+
+                confirmationY = true;
+
+                System.out.println("Merci pour votre confirmation. \"Y\" = " + Y);
+
+            } else if (reponse.equalsIgnoreCase("non")) {
+
+                confirmationY = false;
+
+            } else {
+
+                System.out.println("Réponse invalide. Veuillez répondre par 'oui' ou 'non'.");
+
+            }
+
+        }
+
         userInput.close();
 
     }
+
+    public static void main(String[] args) {
+
+        mainExo02();
+
+    }
+    
 
 }

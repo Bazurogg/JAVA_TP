@@ -60,7 +60,6 @@ public class Ex01 {
 
         }
 
-
         // Saisie et confirmation de 'b'
         while (!confirmationB) {
 
