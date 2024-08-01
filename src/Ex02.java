@@ -2,7 +2,6 @@
 // Imports de librairies Java.
 import java.util.Scanner;
 
-
 public class Ex02 {
 
     public static void mainExo02() {
@@ -71,7 +70,29 @@ public class Ex02 {
 
         }
 
+        // Appel de notre fonction "puissance" avec les valeurs de "x" et "y" en paramétres.
+        // "long" désigne un type de données primitif en java de la taille de 8 octets à la différence du "int" qui lui n'en compte que 4.
+        // Le "long" a donc une plage plus large pour stocker un nombre entier que le "int".
+        long resultat = puissance(X, Y);
+
+        System.out.println("\nX = " + X + " élevé à la puissance " + "Y = " + Y + " est égal à " + resultat);
+
         userInput.close();
+
+    }
+
+    // Fonction pour calculer x élevé à la puissance y
+    public static long puissance(int x, int y) {
+
+        long resultat = 1;
+
+        for (int i = 0; i < y; i++) {
+
+            resultat *= x;
+
+        }
+
+        return resultat;
 
     }
 
@@ -80,6 +101,6 @@ public class Ex02 {
         mainExo02();
 
     }
-    
+
 
 }
