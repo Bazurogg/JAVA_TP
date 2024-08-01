@@ -127,6 +127,7 @@ public class Ex01 {
         System.out.println("L'équation est: " + a + "x² + " + b + "x + " + c + " = 0." + "\nSon discriminant est égale à :" + discriminant);
 
         // Résolution de l'équation
+        // boucle "if" pour donner le résultat selon les cas différents cas possibles càd selon la valeur du "discriminant".
         if (discriminant > 0) {
 
             double x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
