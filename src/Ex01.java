@@ -4,8 +4,8 @@ import java.util.Scanner;
 // Déclaration de la classe principale
 public class Ex01 {
 
-    // Méthode exécuter qui va contenir le code.
-    public static void executerExo01(){
+    // Méthode qui va contenir le code.
+    public static void mainExo01(){
 
         // Lire les inputs utilisateurs
         Scanner saisieUtilisateur = new Scanner(System.in);
@@ -124,7 +124,7 @@ public class Ex01 {
         double discriminant = b * b - 4 * a * c;
 
         // Affichage de l'équation et du discriminant.
-        System.out.println("L'équation est: " + a + "x² + " + b + "x + " + c + " = 0." + "\nSon discriminant est égale à :" + discriminant);
+        System.out.println("L'équation est: " + a + "x² + " + b + "x + " + c + " = 0." + "\nCalcul du discriminant: " + b + " * " + b + " - " + "4" + a + " * " + c + "\nSon discriminant est égale à : " + discriminant);
 
         // Résolution de l'équation
         // boucle "if" pour donner le résultat selon les cas différents cas possibles càd selon la valeur du "discriminant".
@@ -162,7 +162,7 @@ public class Ex01 {
     // Méthode "main" point d'entrée du programme, qui appelle la méthode "executerExo01".
     public static void main(String[] args) {
 
-        executerExo01();
+        mainExo01();
 
     }
 
