@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.Scanner;
 
 public class Ex03 {
-    
+
     public static void mainExo03() {
 
         // affectation de la taille de notre tableau à une variable pour ré-utilisation de cette valeurs pour le remplissage plus tard.
@@ -34,18 +34,26 @@ public class Ex03 {
 
         }
 
-        // display du tableau :
+
+        // Affichage du tableau dans la console :
+
         // avant rangement
         System.out.println("\nGénération d'un tableau aléatoire");
+
         System.out.print(Arrays.toString(TabEntiers));
 
-        //aprés rangement
+
+        //aprés rangement => décroissant
+        // grâce à la méthode "reverseOrder" de la classe "Collections"
+        // qui renvoie un comparateur qui permets d'ordonner la collection dans l'ordre inverse.
         Arrays.sort(TabEntiers, Collections.reverseOrder());
-        System.out.println("\n");
-        System.out.println("\nTrions le par ordre décroissant");
+
+        System.out.println("\n\nTrions le par ordre décroissant");
+
         System.out.print(Arrays.toString(TabEntiers));
 
         Scanner userInput = new Scanner(System.in);
+
 
         while (!confirmationX) {
 
