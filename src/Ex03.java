@@ -83,22 +83,68 @@ public class Ex03 {
 
         }
 
+        // Recherche de l'élément "x" dans le tableau trié.
+        int position = rechercheX(TabEntiers, x);
+
+        if (position != -1) {
+
+            System.out.println("L'élément " + x + " a été trouvé à la position " + position);
+
+        } else {
+
+            System.out.println("L'élément " + x + " n'a pas été trouvé dans le tableau.");
+
+        }
+
         userInput.close();
 
     }
 
+    // notre fonction de recherche de "X" dans la tableau trié via la recherche dichotomique.
+    public static int rechercheX(Integer[] tab, int x) {
 
-    /*
-    public static int rechercheEntier (){
+        // initialisation des marqeurs de positions:
+        // début du tableau
+        int gauche = 0;
 
+        // fin du tableau
+        int droite = tab.length - 1;
 
-    };**/
+        //"tant que" gauche est inférieur ou égal à droite
+        while (gauche <= droite) {
 
-    // execution
+            // calcul du milieu de la plage des valeurs sur laquelle on se trouve
+            int milieu = gauche + (droite - gauche) / 2;
+
+            // on vérifie si l'élément du milieu est égale à "x"
+            if (tab[milieu] == x) {
+
+                return milieu;
+
+            }
+
+            // si l'élément "tab[milieu]" situé à l'indice du tableau "milieu" et qu'il est plus grand que "x" alors "x" ce trouve dans la partie droite du tableau.
+            if (tab[milieu] > x) {
+
+                gauche = milieu + 1;
+
+            // sinon il est plus petit alors il se trouve dans la partie gauche.
+            } else {
+
+                droite = milieu - 1;
+
+            }
+
+        }
+
+        // si l'élément n'a pas été trouvé alors :
+        return -1;
+
+    }
+
+    // Exécution
     public static void main(String[] args) {
-
         mainExo03();
-
     }
 
 }

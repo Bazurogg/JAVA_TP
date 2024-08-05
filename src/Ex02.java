@@ -24,6 +24,7 @@ public class Ex02 {
 
             String reponse = userInput.next();
 
+            // "equalIgnoreCase" permets la comparaison de 2 chaînes de caractères entre elles.
             if (reponse.equalsIgnoreCase("oui")) {
 
                 confirmationX = true;
