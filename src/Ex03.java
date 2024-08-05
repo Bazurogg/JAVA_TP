@@ -100,7 +100,7 @@ public class Ex03 {
 
     }
 
-    // notre fonction de recherche de "X" dans la tableau trié via la recherche dichotomique.
+    // notre fonction de recherche de "X" dans la tableau trié via la recherche "dichotomique".
     public static int rechercheX(Integer[] tab, int x) {
 
         // initialisation des marqeurs de positions:
