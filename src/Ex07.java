@@ -62,6 +62,9 @@ public class Ex07 {
     }
 
     // Procédure pour effectuer le calcul grâce à un "switch case" qui permets en fonction de l'opérateur choisis par l'utilisateur d'effectuer l'opération qui correspond
+    // on évite ainsi l'abus d'imbriquation abusive d'un "if-else" on a une gestion de cas multiples mieux approprié
+    // le code est plus clair et plus efficace
+    // facilité de maintenance
     public static double calculer(char operateur, double operande1, double operande2) {
 
         double resultat = 0;
